@@ -16,82 +16,87 @@
 
 <body>
   <!-- header section -->
-  <nav class=" navbar navbar-expand-lg bg-white py-2 d-none d-md-none d-lg-block mt-3 position-sticky top-0 z-1">
-    <div class="container">
-      <div class="row w-100 align-items-center">
-
-
-        <div class="col-3">
-          <a class="navbar-brand" href="#">
-            <img src="./imges/Groffer-Logo (1).svg" alt="Logo" class="img-fluid" style="width: 150px;">
-          </a>
+  <header class="position-sticky top-0 z-1 bg-white">
+    <div class="container py-3">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-2 d-flex justify-content-start align-items-center p-2 d-lg-none">
+          <button class="btn btn-outline-secondary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu">
+            <iconify-icon icon="mingcute:menu-fill"></iconify-icon>
+          </button>
         </div>
 
+        <!-- Logo Section on the left -->
+        <div class="col-4 col-lg-2 d-flex align-items-center">
+          <img class="img-fluid" src="./imges/Groffer-Logo (1).svg" alt="Logo" class="ms-2">
+        </div>
 
-        <div class="col-6">
+        <!-- Search Bar for Large Screens in the center -->
+        <div class="col-8 col-lg-6 d-none d-lg-flex justify-content-center">
           <div class="input-group">
             <select class="form-select" aria-label="Category select">
               <option selected>Category</option>
               <option value="1">Fasting</option>
-              <option value="2">Vagen</option>
-              <option value="3">Galutan-free</option>
-              <option>Paleo</option>
-              <option value="1">Falexitrain</option>
-              <option value="2">Ketio</option>
-              <option value="3">Bakery</option>
-              <option value="3">Granalo</option>
-              <option value="3">Muselie</option>
-              <option value="3">Category 3</option>
-              <option value="3">Category 3</option>
+              <option value="2">Vegan</option>
+              <option value="3">Gluten-free</option>
+              <!-- Additional options here -->
             </select>
             <input type="text" class="form-control" placeholder="Search products..." aria-label="Search">
-            <button class="btn btn-outline-secondary " type="button" id="button-search">
+            <button class="btn btn-outline-secondary" type="button" id="button-search">
               <iconify-icon icon="basil:search-outline"></iconify-icon>
             </button>
           </div>
         </div>
 
+        <!-- Right Section for Login, Cart, and Account -->
+        <div class="col-4 col-lg-4 d-flex justify-content-end align-items-center">
+          <div class="d-flex align-items-center">
+            <!-- Login/Account Links for large screens -->
+            <div class="d-none d-lg-block d-flex align-items-center">
+              <div class="text-center me-4 d-none d-lg-block">
 
-        <div class="col-3">
-          <div class="d-flex justify-content-end align-items-center">
-
-
-            <div class="me-4 text-center">
-              <a href="#" class="text-muted d-inline-block">
-                <iconify-icon class="fs-2" icon="fluent-mdl2:contact" data-bs-target="#exampleModalToggle2"
-                  data-bs-toggle="modal"></iconify-icon>
-                <div class="d-inline-block">
-                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
-                    aria-labelledby="exampleModalToggleLabel" tabindex="-1"></div>
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                      <div class="modal-header">
-
-                      </div>
-
-
-                    </div>
+                <div class="d-flex align-items-center">
+                  <iconify-icon class="fs-2  me-2" icon="fluent-mdl2:contact" data-bs-target="#exampleModalToggle2"
+                    data-bs-toggle="modal"></iconify-icon>
+                  <div class="d-flex flex-column align-items-start">
+                    <span class="fw-bold">Account $ lists</span>
+                    <span>
+                      <a href="./Pages/login.html" class="text-black">Login</a> /
+                      <a href="./Pages/register.html" class="text-black">Register</a>
+                    </span>
                   </div>
-                  <a class="text-black fw-bold" href="./pages/login.html">login</a> / <a class="text-black fw-bold"
-                    href="./pages/signin.html">Sign in</a><br><span class="fw-bold">Account & Lists</span>
+
                 </div>
-              </a>
-            </div>
-            <div class="d-flex align-items-center bg-warning text-black rounded-3 px-2">
-              <div class="position-relative " class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                <iconify-icon class="position-relative mt-3 text-black" icon="mdi:shopping-cart" width="25"
-                  height="25"></iconify-icon>
-                <span id="cartQuantityBadge"
-                  class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success mt-3">0</span>
               </div>
-              <h6 id="totalPrice" class="mb-0 ms-4 ">Cart <br /><span>$0.00</span></h6>
+            </div>
+
+
+            <!-- Cart Section -->
+            <div class="d-flex align-items-center bg-warning text-black rounded-3 px-4 py-2 ms-3">
+              <div class="position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight">
+                <iconify-icon class="text-black" icon="mdi:shopping-cart" width="20" height="20"></iconify-icon>
+                <span id="cartQuantityBadge"
+                  class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success">0</span>
+              </div>
+              <h6 id="totalPrice" class="mb-0 ms-2 d-none d-lg-block">Cart <br><span>$0.00</span></h6>
+            </div>
+
+            <!-- Account Icon for Mobile -->
+            <div class="ms-2 d-lg-none">
+              <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
+                aria-controls="offcanvasLogin">
+                <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
+                  icon="arcticons:contacts-alt"></iconify-icon>
+              </button>
             </div>
           </div>
         </div>
+
       </div>
     </div>
-  </nav>
+  </header>
+
 
   <hr class="d-none d-md-none d-lg-block">
 
@@ -206,97 +211,8 @@
     </div>
   </nav>
 
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 z-1 d-lg-none d-sm-block d-md-block w-100">
-    <div class="container d-flex justify-content-between align-items-center">
-      <!-- Left Side (Button + Logo) -->
-      <div class="d-flex align-items-center">
-        <!-- Navbar Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Logo -->
-        <img src="./imges/Groffer-Logo (1).svg" alt="Logo" class="img-fluid ms-3" style="width: 150px;">
-      </div>
-
-      <!-- Right Side (Cart + Profile Button) -->
-      <div class="d-flex align-items-center">
-        <!-- Shopping Cart Icon -->
-        <div class="position-relative me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-          aria-controls="offcanvasRight">
-          <iconify-icon class="text-black" icon="mdi:shopping-cart" width="25" height="25"></iconify-icon>
-          <span id="cartQuantityBadge"
-            class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-success">0</span>
-        </div>
-
-        <!-- Profile Icon -->
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
-          aria-controls="offcanvasLogin">
-          <iconify-icon class="fs-1 rounded-circle bg-success p-2 text-white fw-bold"
-            icon="arcticons:contacts-alt"></iconify-icon>
-        </button>
-      </div>
-
-      <!-- Navbar Content for Links -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Shop</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Blog</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Blog Default</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Single Article</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Media</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">2 Columns</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">3 Columns</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">4 Columns</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Pages</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Contact</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Wishlist</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
   <!-- Hero Section -->
-  <div class="bg-color mt-5">
+  <div class="bg-color mt-4">
     <div class="container">
       <div class="row align-items-center mt-3">
         <div class="col-md-6 col-12 mb-4 mb-md-0 mt-sm-5">
@@ -1197,7 +1113,7 @@
     </div>
 
     <div class="offcanvas-footer container mb-5">
-      <hr/>
+      <hr />
       <div class="d-flex justify-content-between">
         <strong class="text-success">Total:</strong>
         <strong id="totalPrices">$0.00</strong>
@@ -1211,8 +1127,32 @@
 
 
 
+  <!-- Offcanvas Menu for Mobile and Tablet -->
+  <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">Home</a></li>
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">About</a></li>
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">Shop</a></li>
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">Blog</a></li>
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">Media</a></li>
+        <li class="list-group-item "><a class="text-dark text-decoration-none" href="#">Pages</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
 
   <script src="./js/add-to-cart.js"></script>
+
+
+
 
 
 </body>
