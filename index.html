@@ -26,12 +26,12 @@
           </button>
         </div>
 
-        <!-- Logo Section on the left -->
+
         <div class="col-4 col-lg-2 d-flex align-items-center">
-          <img class="img-fluid" src="./imges/Groffer-Logo (1).svg" alt="Logo" class="ms-2">
+          <img class="img-fluid me-5" src="./imges/Groffer-Logo (1).svg" alt="Logo" class="ms-2">
         </div>
 
-        <!-- Search Bar for Large Screens in the center -->
+
         <div class="col-8 col-lg-6 d-none d-lg-flex justify-content-center">
           <div class="input-group">
             <select class="form-select" aria-label="Category select">
@@ -39,7 +39,7 @@
               <option value="1">Fasting</option>
               <option value="2">Vegan</option>
               <option value="3">Gluten-free</option>
-              <!-- Additional options here -->
+
             </select>
             <input type="text" class="form-control" placeholder="Search products..." aria-label="Search">
             <button class="btn btn-outline-secondary" type="button" id="button-search">
@@ -61,8 +61,8 @@
                   <div class="d-flex flex-column align-items-start">
                     <span class="fw-bold">Account $ lists</span>
                     <span>
-                      <a href="./Pages/login.html" class="text-black">Login</a> /
-                      <a href="./Pages/register.html" class="text-black">Register</a>
+                      <a href="./Pages/login.html" class="text-black fw-bold">Login</a> /
+                      <a href="./pages/signin.html" class="text-black fw-bold">Sigin</a>
                     </span>
                   </div>
 
@@ -83,7 +83,7 @@
             </div>
 
             <!-- Account Icon for Mobile -->
-            <div class="ms-2 d-lg-none">
+            <div class="ms-1 d-lg-none">
               <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLogin"
                 aria-controls="offcanvasLogin">
                 <iconify-icon class="fs-1 rounded-circle bg-success mt-1 p-2 text-white fw-bold"
@@ -96,7 +96,6 @@
       </div>
     </div>
   </header>
-
 
   <hr class="d-none d-md-none d-lg-block">
 
@@ -798,7 +797,7 @@
   </div>
 
 
-  <div class="shop-bg-img mt-5 my-5">
+  <div class="shop-bg-img bg-no-repeat bg-cover mt-5 my-5 d-none d-sm-none d-md-block d-lg-block">
     <h1 class="text-center mt-5 text-white py-5 p-5">Shop by Lifestyle</h1>
     <div class="container mt-5 py-2">
       <div class="row">
@@ -863,7 +862,7 @@
 
   <div class="container mt-5 g-3 my-5 d-none d-sm-none d-md-block d-lg-block">
     <div class="row">
-      <div class="col-md-12 col-lg-5 mb-4 baner-bg-img">
+      <div class="col-md-12 col-lg-5 mb-4 baner-bg-img bg-no-repeat bg-cover">
         <div class="mt-5">
           <span>10% At Any Nearest Stores</span>
           <h1 class="fw-bold mt-3">30% Off On <br> All Veggies</h1>
@@ -872,7 +871,7 @@
       </div>
       <div class="col-lg-2">
       </div>
-      <div class="col-md-12 col-lg-5 mb-4 bg-img-2">
+      <div class="col-md-12 col-lg-5 mb-4 bg-img-2 bg-no-repeat bg-cover">
         <div class="mt-5">
           <span>20% Online Orders Only</span>
           <h1 class="fw-bold mt-3">Organic <br> Fruits & Nuts</h1>
@@ -958,7 +957,6 @@
   </div>
 
 
-
   <!-- Footer-->
   <footer class="footer">
     <div class="container py-4">
@@ -979,18 +977,18 @@
       <hr class="container text-secondary">
     </div>
 
-
     <div class="container py-4">
       <div class="row">
-        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+
+        <div class="col-lg-4 col-md-12 col-sm-12 mb-4 mb-md-0">
           <div class="footer-logo">
             <img class="img-fluid w-50" src="./imges/Groffer-Logo (1).svg" alt="">
           </div>
           <p class="text-secondary mt-2">Online grocery shopping and delivery at Groffer. Buy fruits, bread, vegetables.
           </p>
-          <div class="d-flex flex-column flex-md-row mt-lg-5 mt-sm-0">
+          <div class="d-flex flex-column flex-sm-row  mt-4">
             <button
-              class="bg-black border-0 rounded-3 mb-2 mb-md-0 me-md-2 text-nowrap d-flex align-items-center justify-content-center"
+              class="bg-black border-0 rounded-3 mb-2 mb-sm-0 me-sm-2 text-nowrap d-flex align-items-center justify-content-center"
               style="width: 160px; height: 50px;">
               <div class="d-flex align-items-center">
                 <iconify-icon class="mb-1 me-1 fs-4 text-white" icon="bi:apple"></iconify-icon>
@@ -1001,10 +999,10 @@
               </div>
             </button>
             <button
-              class="bg-black border-0 rounded-3 ms-md-2 text-nowrap d-flex align-items-center justify-content-center"
+              class="bg-black border-0 rounded-3 ms-sm-2 text-nowrap d-flex align-items-center justify-content-center"
               style="width: 160px; height: 50px;">
               <div class="d-flex align-items-center">
-                <iconify-icon class="mb-1 me-1 fs-4" icon="logos:google-play-icon"></iconify-icon>
+                <iconify-icon class="fs-4" icon="logos:google-play-icon"></iconify-icon>
                 <div class="text-white text-center">
                   <span class="">GET IT ON</span>
                   <h6 class="fw-bold mb-0">Google Play</h6>
@@ -1012,55 +1010,66 @@
               </div>
             </button>
           </div>
+        </div>
 
 
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <h5 class="fw-bold">Quick Links</h5>
-          <ul class="list-unstyled text-secondary">
-            <li>Our Services</a></li>
-            <li>About Company</a></li>
-            <li>Latest News</a></li>
-            <li>Meet The Team</a></li>
-            <li>Our Products</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <h5 class="fw-bold">Account</h5>
-          <ul class="list-unstyled text-secondary">
-            <li>Your Account</a></li>
-            <li>Shipping rates</a></li>
-            <li>Refunds</a></li>
-            <li>Delivery Info</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <h5 class="fw-bold">About Us</h5>
-          <ul class="list-unstyled text-secondary">
-            <li>About Company</a></li>
-            <li>Our Team</a></li>
-            <li>Contacts</a></li>
-            <li>News & Events</a></li>
-            <li>Order Tracking</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <h5>Contact Us</h5>
+        <div
+          class="col-lg-8 col-md-12 col-sm-12 mt-5 d-flex flex-column flex-sm-row justify-content-center align-items-center">
 
-          <p class="text-secondary"> <iconify-icon icon="bxs:map" class="me-1 text-success"></iconify-icon>4 Grand
-            Central Terminal New York, NY 10 City name, CA 90896, United States USA.</p>
-          <p class="text-secondary"><iconify-icon icon="ic:round-email"
-              class="text-success me-1"></iconify-icon>contact@example</p>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="fw-bold">Quick Links</h5>
+              <ul class="list-unstyled text-secondary">
+                <li>Our Services</li>
+                <li>About Company</li>
+                <li>Latest News</li>
+                <li>Meet The Team</li>
+                <li>Our Products</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="fw-bold">Account</h5>
+              <ul class="list-unstyled text-secondary">
+                <li>Your Account</li>
+                <li>Shipping rates</li>
+                <li>Refunds</li>
+                <li>Delivery Info</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5 class="fw-bold">About Us</h5>
+              <ul class="list-unstyled text-secondary">
+                <li>About Company</li>
+                <li>Our Team</li>
+                <li>Contacts</li>
+                <li>News & Events</li>
+                <li>Order Tracking</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-6 mb-4 mb-md-0">
+              <h5>Contact Us</h5>
+              <p class="text-secondary">
+                <iconify-icon icon="bxs:map" class="me-1 text-success"></iconify-icon>
+                4 Grand Central Terminal New York, NY 10 City name, CA 90896, United States USA.
+              </p>
+              <p class="text-secondary">
+                <iconify-icon icon="ic:round-email" class="text-success me-1"></iconify-icon>
+                contact@example
+              </p>
+            </div>
+          </div>
         </div>
       </div>
+
       <p class="mt-5 text-secondary text-center">Copyright by ModelTheme. All Rights Reserved.</p>
     </div>
+
   </footer>
 
-
-
-
-  <!-- OFFCAVAS -->
+  <!-- OFFCAVAS Login & Sigin -->
   <div class="offcanvas offcanvas-end w-75" tabindex="-1" id="offcanvasLogin" aria-labelledby="offcanvasLoginLabel">
     <div class="offcanvas-header">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -1094,43 +1103,31 @@
     </div>
   </div>
 
-
-  <!-- Add to Cart off-->
-
-
-
+  <!-- Add to Cart off Offcavas-->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body" id="cartItems">
+      <!-- Cart items will appear here -->
       <div id="cartItems"></div>
-      <span id="cartQuantityBadge"></span>
-      <div id="totalPrice"></div>
-
-      <p>Empty!</p>
     </div>
 
+    <!-- Footer section showing total price -->
     <div class="offcanvas-footer container mb-5">
       <hr />
       <div class="d-flex justify-content-between">
-        <strong class="text-success">Total:</strong>
+        <strong class="text-black-50">Total:</strong>
         <strong id="totalPrices">$0.00</strong>
-      </div>
-      <div class="d-flex justify-content-between mt-2">
-
       </div>
     </div>
   </div>
 
-
-
-
   <!-- Offcanvas Menu for Mobile and Tablet -->
   <div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+      <h5 class="offcanvas-title" id="offcanvasMenuLabel">Shop by Categories </h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
@@ -1150,11 +1147,6 @@
 
 
   <script src="./js/add-to-cart.js"></script>
-
-
-
-
-
 </body>
 
 </html>
